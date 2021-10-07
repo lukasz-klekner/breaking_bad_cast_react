@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import './App.css'
 import Header from './components/ui/Header'
+import CharacterGrid from './components/character/CharacterGrid'
 
 const BASE_URL = 'https://www.breakingbadapi.com/api/characters'
 
@@ -16,10 +17,10 @@ function App() {
     setIsLoading(false)
   }, [])
 
-  console.log(characters)
   return (
     <div className='App'>
       <Header />
+      <CharacterGrid characters={characters} isLoading={isLoading} />
     </div>
   )
 }
