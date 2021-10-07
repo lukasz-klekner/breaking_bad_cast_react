@@ -4,6 +4,7 @@ import axios from 'axios'
 import './App.css'
 import Header from './components/ui/Header'
 import CharacterGrid from './components/character/CharacterGrid'
+import SearchInput from './components/ui/SearchInput'
 
 const BASE_URL = 'https://www.breakingbadapi.com/api/characters'
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
+      <SearchInput />
       <CharacterGrid characters={characters} isLoading={isLoading} />
     </div>
   )
